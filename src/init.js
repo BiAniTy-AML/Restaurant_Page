@@ -1,30 +1,7 @@
 import "./rest.css";
 
-const init_page = function () {
-    nav_init();
+const init_home_page = function () {
     main_content_init();
-};
-
-const nav_init = function () {
-    const nav = document.createElement("nav");
-    document.body.prepend(nav);
-
-    const ul = document.createElement("ul");
-    nav.append(ul);
-
-    let lis = ["Home", "About", "Contacts"];
-
-    lis.forEach((li) => {
-        const list_item = document.createElement("li");
-
-        const anchor = document.createElement("a");
-        anchor.setAttribute("href", "#");
-        anchor.textContent = li;
-
-        list_item.append(anchor);
-
-        ul.append(list_item);
-    });
 };
 
 const main_content_init = function () {
@@ -42,7 +19,7 @@ const main_content_init = function () {
 
     const header = document.createElement("div");
     header.classList.add("header");
-    header.textContent = "Main Section header";
+    header.textContent = "Home Page";
     main.append(header);
 
     const intro = document.createElement("article");
@@ -59,4 +36,4 @@ const main_content_init = function () {
     }
 };
 
-export { init_page };
+export { init_home_page };
