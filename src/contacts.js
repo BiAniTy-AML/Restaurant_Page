@@ -4,20 +4,25 @@ const contacts_init = function () {
     main_content();
 };
 
+// What goes inside #content
 const main_content = function () {
+    // The main content of the page
     const main = document.createElement("section");
     main.classList.add("main");
     content.append(main);
 
+    // Header of the page
     const header = document.createElement("div");
     header.classList.add("header");
     header.textContent = "Contact me!";
     main.append(header);
 
+    // Everything after the header
     const intro = document.createElement("article");
     intro.classList.add("intro");
     main.append(intro);
 
+    // paragraphs inside intro
     for (let i = 0; i < 3; i++) {
         const paragraph = document.createElement("p");
 
