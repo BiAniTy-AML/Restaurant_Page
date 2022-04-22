@@ -19,6 +19,7 @@ body {
     flex-flow: column wrap;
 
     gap: 15px;
+    background: #280828;
 }
 
 nav {
@@ -28,7 +29,7 @@ nav {
     right: 0;
 
     height: 50px;
-    background: mistyrose;
+    background: rgb(237, 185, 253);
     display: grid;
     place-items: center;
 }
@@ -78,11 +79,11 @@ nav a:hover {
 }
 
 .intro > p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .main {
-    background: mistyrose;
+    background: rgb(237, 185, 253);
     padding: 10px 20px;
     display: grid;
     row-gap: 10px;

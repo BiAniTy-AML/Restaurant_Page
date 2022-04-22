@@ -1,4 +1,6 @@
+import { about_init } from "./about";
 import { init_home_page } from "./init";
+import { contacts_init } from "./contacts";
 
 const Navbar = (function () {
     const nav_init = (function () {
@@ -29,16 +31,19 @@ const Navbar = (function () {
 
         tabs.forEach((tab, index) => {
             tab.addEventListener("click", () => {
-                purge_all_children(content);
+                Helpers.purge_all_children(content);
 
                 switch (index) {
                     case 0:
+                        init_home_page();
                         break;
 
                     case 1:
+                        about_init();
                         break;
 
                     case 2:
+                        contacts_init();
                         break;
 
                     default:
@@ -47,14 +52,18 @@ const Navbar = (function () {
             });
         });
     })();
-
-    return { nav_init };
 })();
 
-init_home_page();
+const Helpers = (function () {
+    const purge_all_children = function (parent) {
+        while (parent.lastChild) {
+            parent.removeChild(parent.lastChild);
+        }
+    };
 
-function purge_all_children(parent) {
-    while (parent.lastChild) {
-        parent.removeChild(parent.lastChild);
-    }
-}
+    return { purge_all_children };
+})();
+
+const Main = (function () {
+    init_home_page();
+})();

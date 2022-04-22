@@ -1,10 +1,10 @@
 import "./rest.css";
 
 const init_home_page = function () {
-    main_content_init();
+    main_content();
 };
 
-const main_content_init = function () {
+const main_content = function () {
     const content = document.querySelector("#content");
 
     const img = document.createElement("img");
